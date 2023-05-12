@@ -16,7 +16,7 @@ const convertKtoF = (temp) => {
 const findLatAndLong = () => {
   //let lat, long;
   axios
-    .get('https://weather-report-proxy-server.herokuapp.com/location', {
+    .get('https://ada-weather-report-proxy-server.onrender.com/location', {
       params: {
         q: state.city,
       },
@@ -34,7 +34,7 @@ const findLatAndLong = () => {
 
 const getWeather = () => {
   axios
-    .get('https://weather-report-proxy-server.herokuapp.com/weather', {
+    .get('https://ada-weather-report-proxy-server.onrender.com/weather', {
       params: {
         lat: state.lat,
         lon: state.long,
@@ -42,7 +42,7 @@ const getWeather = () => {
     })
     .then((response) => {
       const weather = response.data;
-      state.temp = Math.round(convertKtoF(weather.current.temp));
+      state.temp = Math.round(convertKtoF(weather.main.temp));
       formatTempAndGarden();
     })
     .catch((error) => {
