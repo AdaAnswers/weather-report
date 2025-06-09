@@ -16,21 +16,22 @@
 <body>
     <header class="header__header">
         <h1>Weather Report</h1>
-        <span>For the lovely city of 
-            <span id="headerCityName" class="header__city-name"></span></span>
+        <p>
+            For the lovely city of <span id="headerCityName" class="header__city-name"></span>
+        </p>
     </header>
-    <section class="temperature__section">
+    <article class="temperature__section">
         <h2>Temperature</h2>
-        <div class="temperature__content">
+        <section class="temperature__content">
             <div class="temperature__controls">
-                <span id="increaseTempControl">⬆️</span>
-                <span id="tempValue"></span>
-                <span id="decreaseTempControl">⬇️</span>
+                <button id="increaseTempControl">⬆️</button>
+                <p id="tempValue"></p>
+                <button id="decreaseTempControl">⬇️</button>
             </div>
             <button id="currentTempButton">Get Realtime Temperature</button>
-        </div>
-    </section>
-    <section class="sky__section">
+        </section>
+    </article>
+    <article class="sky__section">
         <h2>Sky</h2>
         <select id="skySelect">
             <option>Sunny</option>
@@ -38,21 +39,21 @@
             <option>Rainy</option>
             <option>Snowy</option>
         </select>
-    </section>
+    </article>
 
-    <section class="city-name__section">
+    <article class="city-name__section">
         <h2>City Name</h2>
         <input type="text" id="cityNameInput" value="Seattle" />
         <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
-    </section>
+    </article>
 
-    <section class="garden__section">
+    <article class="garden__section">
         <h2>Weather Garden</h2>
-        <div id="gardenContent" class="garden__content">
+        <section id="gardenContent" class="garden__content">
             <div id="sky"></div>
             <div id="landscape"></div>
-        </div>
-    </section>
+        </section>
+    </article>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./src/index.js"></script>
 </body>
