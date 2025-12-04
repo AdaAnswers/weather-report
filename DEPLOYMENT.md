@@ -24,7 +24,7 @@ The deployment process assumes that the only files that are needed to build the 
 - `npm run build:html`
   - Builds HTML output using the repository's `build.js` script.
   - Internally runs: `node build.js`
-  - The scipt tags that should be replaced by `build.js` must be enclosed in `<!-- DEV_SCRIPTS_START -->` and `<!-- DEV_SCRIPTS_END -->` comments in `index.html`.
+  - The script tags that should be replaced by `build.js` must be enclosed in `<!-- DEV_SCRIPTS_START -->` and `<!-- DEV_SCRIPTS_END -->` comments in `index.html`.
 
 - `npm run build:css`
   - Copies the `styles` directory into `dist` so CSS is included in the distribution.
