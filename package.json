@@ -5,7 +5,7 @@
     "scripts": {
         "start": "echo 'Not a node project. View in browser to run or debug.\nnpm present only for linting. (`npm run lint` after running `npm i`)'",
         "lint": "eslint .",
-        "build:dep": "mkdir -p ./dist/src",
+        "build:dep": "rm -rf dist/* && mkdir -p ./dist/src",
         "build:js": "uglifyjs src/*.js -m toplevel -c -o dist/src/index.min.js",
         "build:html": "node build.js",
         "build:css": "cp -R styles ./dist",
